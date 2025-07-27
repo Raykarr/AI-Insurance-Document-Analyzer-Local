@@ -12,5 +12,4 @@ python-dotenv
 loguru
 tiktoken
 pydantic
-python-multipart
-gunicorn 
+python-multipart 
