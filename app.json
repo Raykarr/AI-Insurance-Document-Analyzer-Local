@@ -1,0 +1,25 @@
+{
+  "name": "AI Insurance Document Analyzer",
+  "description": "Upload your insurance policy and let AI identify key concerns, exclusions, and important details automatically.",
+  "repository": "https://github.com/Raykarr/AI-Insurance-Document-Analyzer",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["python", "fastapi", "ai", "insurance", "document-analysis"],
+  "env": {
+    "GROQ_API_KEY": {
+      "description": "Your Groq API key for LLM functionality",
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "stack": "heroku-22"
+} 

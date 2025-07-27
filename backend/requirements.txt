@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+PyMuPDF
+groq
+langchain
+langchain-community
+langchain-chroma
+chromadb
+transformers
+torch
+python-dotenv
+loguru
+tiktoken
+pydantic
+python-multipart
+gunicorn 
