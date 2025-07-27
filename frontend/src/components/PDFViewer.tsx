@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Finding } from '@/lib/api';
+import { Finding } from '@/lib';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Download, ExternalLink, Eye } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/hooks/use-toast';
 
-// Set up PDF.js worker - disable worker completely to avoid CORS issues
+// Set up PDF.js worker - disable worker completely cors issue de raha gadha
 // pdfjs.GlobalWorkerOptions.workerSrc = '';
 
 interface PDFViewerProps {
@@ -27,7 +27,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ documentId, selectedFinding, find
       setLoading(true);
       setError(null);
       
-      // Test if PDF is accessible with proper headers
+      // Testinggggg 
       fetch(pdfUrl, { 
         method: 'GET',
         headers: {

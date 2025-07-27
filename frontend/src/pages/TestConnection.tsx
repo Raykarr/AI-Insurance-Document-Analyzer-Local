@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
-import apiService from '@/lib/api';
+import { apiService } from '@/lib';
 
 const TestConnection: React.FC = () => {
   const { toast } = useToast();
