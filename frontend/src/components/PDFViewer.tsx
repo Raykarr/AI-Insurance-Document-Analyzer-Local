@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Finding } from '@/lib';
+import { Finding } from '@/lib/api';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Download, ExternalLink, Eye } from 'lucide-react';
