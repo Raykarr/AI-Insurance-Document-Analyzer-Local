@@ -1,4 +1,4 @@
-# 🚀 Insurance Document Analysis System
+# 🚀 LOCAL Insurance Document Analysis System
 
 A **fully functional, production-ready** AI-powered insurance document analysis system that proactively identifies concerns, exclusions, and important clauses in insurance policies with interactive exploration and contextual chat capabilities.
 
@@ -78,7 +78,7 @@ insurance-document-analyzer/
 
 ### **1. Clone the Repository**
 ```bash
-git clone <repository-url>
+git clone https://github.com/Raykarr/AI-Insurance-Document-Analyzer
 cd insurance-document-analyzer
 ```
 
@@ -118,8 +118,7 @@ npm run dev
 ## 📊 **System Architecture**
 
 ### **Complete Architecture Documentation**
-- **`ARCHITECTURE.md`** - PlantUML diagrams for technical documentation
-- **`ARCHITECTURE_MERMAID.md`** - Mermaid diagrams for GitHub/Notion compatibility
+- **`DIAGRAMS FOLDER`** - Mermaid diagrams for GitHub/Notion compatibility
 
 ### **Data Flow**
 1. **Document Upload** → PDF processing with coordinates
@@ -380,24 +379,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Issues**: GitHub Issues
 - **Discussions**: GitHub Discussions
 - **Documentation**: README files in each directory
-
-## 🎉 **Acknowledgments**
-
-- **Groq**: For fast LLM inference
-- **FastAPI**: For modern Python web framework
-- **React**: For frontend framework
-- **Tailwind CSS**: For utility-first styling
-- **PyMuPDF**: For PDF processing
-- **ChromaDB**: For vector storage
-
----
-
-## 📚 **Documentation**
-
-- **`ARCHITECTURE.md`** - Complete system architecture with PlantUML diagrams
-- **`ARCHITECTURE_MERMAID.md`** - Mermaid diagrams for GitHub/Notion compatibility
-- **`PROJECT_SUMMARY.md`** - Project overview and achievements
-- **`implementation_plan.md`** - Detailed implementation roadmap
 
 ---
 
