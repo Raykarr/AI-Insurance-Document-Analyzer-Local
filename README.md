@@ -46,7 +46,7 @@ insurance-document-analyzer/
 └── README.md             # This file
 ```
 
-## 🛠️ **Technology Stack**
+## **Technology Stack**
 
 ### **Backend**
 - **FastAPI**: Modern Python web framework with async support
