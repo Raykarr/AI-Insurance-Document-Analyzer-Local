@@ -1,12 +1,12 @@
-# 🚀 LOCAL Insurance Document Analysis System
+# LOCAL Insurance Document Analysis System
 
 A **fully functional, production-ready** AI-powered insurance document analysis system that proactively identifies concerns, exclusions, and important clauses in insurance policies with interactive exploration and contextual chat capabilities.
 
-## 📋 **Project Overview**
+## **Project Overview**
 
 This system transforms insurance document analysis from a **reactive Q&A experience** into a **proactive, interactive discovery platform** that automatically scans policies, identifies key concerns, and provides real-time processing with contextual chat.
 
-### **🎯 Key Features**
+### **Key Features**
 
 - **Proactive Analysis**: AI automatically scans documents for concerns across 10 categories
 - **Real-time Processing**: Live progress tracking with detailed step information
@@ -16,7 +16,7 @@ This system transforms insurance document analysis from a **reactive Q&A experie
 - **Contextual Chat**: Ask questions about specific findings with preserved history
 - **Modern UI**: Beautiful, responsive interface with real-time feedback
 
-## 🏗️ **Project Structure**
+## **Project Structure**
 
 ```
 insurance-document-analyzer/
@@ -40,8 +40,7 @@ insurance-document-analyzer/
 │   │   └── components/ui/ # Shadcn/ui components
 │   ├── package.json       # Node.js dependencies
 │   └── vite.config.ts    # Vite configuration
-├── ARCHITECTURE.md        # Complete system architecture (PlantUML)
-├── ARCHITECTURE_MERMAID.md # Architecture diagrams (Mermaid)
+├── ARCHITECTURE.md        # System architecture
 ├── PROJECT_SUMMARY.md     # Project overview and achievements
 ├── implementation_plan.md  # Detailed implementation roadmap
 └── README.md             # This file
@@ -69,7 +68,7 @@ insurance-document-analyzer/
 - **Shadcn/ui**: Beautiful component library
 - **Axios**: HTTP client for API calls
 
-## 🚀 **Quick Start**
+## **Quick Start**
 
 ### **Prerequisites**
 - Python 3.8+
@@ -115,7 +114,7 @@ npm run dev
 - **API Documentation**: http://localhost:8000/docs
 - **Health Check**: http://localhost:8000/health
 
-## 📊 **System Architecture**
+## **System Architecture**
 
 ### **Complete Architecture Documentation**
 - **`DIAGRAMS FOLDER`** - Mermaid diagrams for GitHub/Notion compatibility
@@ -134,7 +133,7 @@ npm run dev
 - **Vector Storage**: ChromaDB for semantic search
 - **Interactive UI**: React with real-time progress
 
-## 🔄 **API Endpoints**
+## **API Endpoints**
 
 ### **Core Endpoints**
 - `POST /ingest` - Upload and analyze document
@@ -149,7 +148,7 @@ npm run dev
 - `GET /docs` - Interactive API documentation
 - `GET /test/chunking` - Test chunking functionality
 
-## 🎯 **User Experience**
+## **User Experience**
 
 ### **1. Document Upload & Processing**
 - Select PDF on home page
@@ -179,7 +178,7 @@ npm run dev
 - Get precise, context-aware answers
 - Chat history preserved across finding selections
 
-## 🔧 **Development**
+## **Development**
 
 ### **Backend Development**
 ```bash
@@ -212,7 +211,7 @@ npm run build
 npm run type-check
 ```
 
-## 🧪 **Testing**
+## **Testing**
 
 ### **Manual Testing**
 1. **Upload a PDF**: Test document upload and processing
@@ -238,7 +237,7 @@ curl "http://localhost:8000/findings/{document_id}"
 curl "http://localhost:8000/progress/{document_id}"
 ```
 
-## 🐛 **Troubleshooting**
+## **Troubleshooting**
 
 ### **Common Issues**
 
@@ -276,14 +275,14 @@ curl "http://localhost:8000/progress/{document_id}"
 - Monitor ChromaDB performance
 - Use SSD storage for better I/O
 
-## 📈 **Performance Metrics**
+## **Performance Metrics**
 
 ### **Target Performance**
-- ✅ Document analysis time < 30 seconds
-- ✅ Finding accuracy > 95%
-- ✅ API response time < 200ms
-- ✅ PDF rendering < 2 seconds
-- ✅ Real-time progress updates every 2 seconds
+- Document analysis time < 30 seconds
+- Finding accuracy > 95%
+- API response time < 200ms
+- PDF rendering < 2 seconds
+- Real-time progress updates every 2 seconds
 
 ### **Optimization Features**
 - Background processing for analysis
@@ -292,21 +291,21 @@ curl "http://localhost:8000/progress/{document_id}"
 - Memory-efficient chunking
 - 120-second upload timeout
 
-## 🔒 **Security**
+## **Security**
 
 ### **Implemented Security Features**
-- ✅ File validation (PDF type checking)
-- ✅ Input sanitization
-- ✅ CORS configuration
-- ✅ API key management
-- ✅ Error handling and recovery
+- File validation (PDF type checking)
+- Input sanitization
+- CORS configuration
+- API key management
+- Error handling and recovery
 
 ### **Environment Variables**
 - Never commit API keys to version control
 - Use `.env` files for local development
 - Use secure environment variables in production
 
-## 🚀 **Deployment**
+## **Deployment**
 
 ### **Backend Deployment**
 ```bash
@@ -337,30 +336,30 @@ npm run start
 - Set up monitoring and logging
 - Database backups
 
-## 📊 **Key Features Status**
+## **Key Features Status**
 
-### **✅ Fully Implemented & Working**
-- [x] **Document Upload**: Drag & drop with auto-upload
-- [x] **Text Extraction**: Location-aware with coordinates
-- [x] **AI Analysis**: Proactive concern detection
-- [x] **Real-time Progress**: Live status updates every 2 seconds
-- [x] **Findings Display**: Categorized with filtering and pagination
-- [x] **PDF Viewer**: Native browser rendering
-- [x] **Contextual Chat**: Finding-specific Q&A with history
-- [x] **Error Handling**: Comprehensive error recovery
-- [x] **Database**: SQLite with findings and cache
-- [x] **Vector Store**: ChromaDB for semantic search
-- [x] **API Documentation**: Complete FastAPI docs
-- [x] **Architecture Documentation**: PlantUML and Mermaid diagrams
+### ** Fully Implemented & Working**
+- **Document Upload**: Drag & drop with auto-upload
+- **Text Extraction**: Location-aware with coordinates
+- **AI Analysis**: Proactive concern detection
+- **Real-time Progress**: Live status updates every 2 seconds
+- **Findings Display**: Categorized with filtering and pagination
+- **PDF Viewer**: Native browser rendering
+- **Contextual Chat**: Finding-specific Q&A with history
+- **Error Handling**: Comprehensive error recovery
+- **Database**: SQLite with findings and cache
+- **Vector Store**: ChromaDB for semantic search
+- **API Documentation**: Complete FastAPI docs
+- **Architecture Documentation**: PlantUML and Mermaid diagrams
 
 ### **🎯 Performance Optimizations**
-- [x] **Background Processing**: Async analysis tasks
-- [x] **Caching Strategy**: Database caching for text and chunks
-- [x] **Deduplication**: Prevents duplicate findings
-- [x] **Timeout Handling**: 120-second upload timeout
-- [x] **Memory Management**: Efficient chunking and processing
+- **Background Processing**: Async analysis tasks
+- **Caching Strategy**: Database caching for text and chunks
+- **Deduplication**: Prevents duplicate findings
+- **Timeout Handling**: 120-second upload timeout
+- **Memory Management**: Efficient chunking and processing
 
-## 🤝 **Contributing**
+## **Contributing**
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
@@ -370,7 +369,7 @@ npm run start
 6. Push to branch: `git push origin feature/amazing-feature`
 7. Open a pull request
 
-## 📄 **License**
+## **License**
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
