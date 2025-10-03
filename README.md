@@ -20,30 +20,30 @@ This system transforms insurance document analysis from a **reactive Q&A experie
 
 ```
 insurance-document-analyzer/
-├── backend/                 # FastAPI backend
-│   ├── app.py              # Main application
-│   ├── requirements.txt    # Python dependencies
-│   ├── insurance_analysis.db # SQLite database
-│   ├── chroma_db/         # Vector database
-│   └── uploads/           # PDF storage
-├── frontend/               # React + TypeScript frontend
+├── backend/                 
+│   ├── app.py              
+│   ├── requirements.txt    
+│   ├── insurance_analysis.db 
+│   ├── chroma_db/         
+│   └── uploads/           
+├── frontend/               
 │   ├── src/
-│   │   ├── pages/         # React pages
-│   │   │   ├── Index.tsx  # Home page with file upload
-│   │   │   └── Analysis.tsx # Main analysis interface
-│   │   ├── components/    # React components
-│   │   │   ├── PDFViewer.tsx # PDF display component
-│   │   │   └── ChatPanel.tsx # Contextual chat interface
-│   │   ├── lib/           # Utilities and services
-│   │   │   ├── api.ts     # API service layer
-│   │   │   └── state.ts   # File state management
-│   │   └── components/ui/ # Shadcn/ui components
-│   ├── package.json       # Node.js dependencies
-│   └── vite.config.ts    # Vite configuration
-├── ARCHITECTURE.md        # System architecture
-├── PROJECT_SUMMARY.md     # Project overview and achievements
-├── implementation_plan.md  # Detailed implementation roadmap
-└── README.md             # This file
+│   │   ├── pages/         
+│   │   │   ├── Index.tsx  
+│   │   │   └── Analysis.tsx 
+│   │   ├── components/    
+│   │   │   ├── PDFViewer.tsx 
+│   │   │   └── ChatPanel.tsx 
+│   │   ├── lib/           
+│   │   │   ├── api.ts     
+│   │   │   └── state.ts   
+│   │   └── components/ui/ 
+│   ├── package.json       
+│   └── vite.config.ts    
+├── ARCHITECTURE.md        
+├── PROJECT_SUMMARY.md     
+├── implementation_plan.md  
+└── README.md
 ```
 
 ## **Technology Stack**
@@ -300,35 +300,6 @@ curl "http://localhost:8000/progress/{document_id}"
 - API key management
 - Error handling and recovery
 
-### **Environment Variables**
-- Never commit API keys to version control
-- Use `.env` files for local development
-- Use secure environment variables in production
-
-## **Deployment**
-
-### **Backend Deployment**
-```bash
-# Production server
-uvicorn app:app --host 0.0.0.0 --port 8000 --workers 4
-
-# Docker (recommended)
-docker build -t insurance-analyzer-backend .
-docker run -p 8000:8000 insurance-analyzer-backend
-```
-
-### **Frontend Deployment**
-```bash
-# Build for production
-npm run build
-
-# Deploy to Vercel (recommended)
-vercel --prod
-
-# Or deploy to other platforms
-npm run start
-```
-
 ### **Production Considerations**
 - Use production ASGI server (Gunicorn + Uvicorn)
 - Set up reverse proxy (Nginx)
@@ -352,35 +323,9 @@ npm run start
 - **API Documentation**: Complete FastAPI docs
 - **Architecture Documentation**: PlantUML and Mermaid diagrams
 
-### **🎯 Performance Optimizations**
+### ** Performance Optimizations**
 - **Background Processing**: Async analysis tasks
 - **Caching Strategy**: Database caching for text and chunks
 - **Deduplication**: Prevents duplicate findings
 - **Timeout Handling**: 120-second upload timeout
 - **Memory Management**: Efficient chunking and processing
-
-## **Contributing**
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Make your changes
-4. Add tests
-5. Commit changes: `git commit -m 'Add amazing feature'`
-6. Push to branch: `git push origin feature/amazing-feature`
-7. Open a pull request
-
-## **License**
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 **Support**
-
-- **Issues**: GitHub Issues
-- **Discussions**: GitHub Discussions
-- **Documentation**: README files in each directory
-
----
-
-**Built with ❤️ using modern AI and web technologies**
-
-**Transform your insurance document analysis experience today! 🚀** 
