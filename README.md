@@ -293,14 +293,14 @@ curl "http://localhost:8000/progress/{document_id}"
 
 ## **Security**
 
-### **Implemented Security Features **
+### ** Implemented Security Features **
 - File validation (PDF type checking)
 - Input sanitization
 - CORS configuration
 - API key management
 - Error handling and recovery
 
-### **Production Considerations **
+### ** Production Considerations **
 - Use production ASGI server (Gunicorn + Uvicorn)
 - Set up reverse proxy (Nginx)
 - Configure SSL/TLS
