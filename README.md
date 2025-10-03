@@ -309,7 +309,7 @@ curl "http://localhost:8000/progress/{document_id}"
 
 ## **Key Features Status**
 
-### ** Fully Implemented & Working **
+### **Fully Implemented & Working**
 - **Document Upload**: Drag & drop with auto-upload
 - **Text Extraction**: Location-aware with coordinates
 - **AI Analysis**: Proactive concern detection
@@ -323,7 +323,7 @@ curl "http://localhost:8000/progress/{document_id}"
 - **API Documentation**: Complete FastAPI docs
 - **Architecture Documentation**: PlantUML and Mermaid diagrams
 
-### ** Performance Optimizations **
+### **Performance Optimizations**
 - **Background Processing**: Async analysis tasks
 - **Caching Strategy**: Database caching for text and chunks
 - **Deduplication**: Prevents duplicate findings
