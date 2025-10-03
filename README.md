@@ -1,6 +1,9 @@
 # LOCAL Insurance Document Analysis System
-
 A **fully functional, production-ready** AI-powered insurance document analysis system that proactively identifies concerns, exclusions, and important clauses in insurance policies with interactive exploration and contextual chat capabilities.
+
+Basically - Insurance documents can be overwhelming and confusing, this AI makes it super easy to understand what you're signing up for
+
+![confused-about-insurance](https://github.com/user-attachments/assets/3efea597-196c-4bc0-be6d-593fb6cf2670)
 
 ## **Project Overview**
 
@@ -16,7 +19,15 @@ This system transforms insurance document analysis from a **reactive Q&A experie
 - **Contextual Chat**: Ask questions about specific findings with preserved history
 - **Modern UI**: Beautiful, responsive interface with real-time feedback
 
+![automation-win](https://github.com/user-attachments/assets/6108e08a-6cf3-4bee-9788-b8f068e591b0)
+
+---
+
 ## **Project Structure**
+
+No more messy document folders - everything is organized and analyzed automatically!
+
+![organized-files](https://github.com/user-attachments/assets/a3198d78-7712-4bb0-981b-4d84beb228ad)
 
 ```
 insurance-document-analyzer/
@@ -46,9 +57,12 @@ insurance-document-analyzer/
 └── README.md
 ```
 
+---
+
 ## **Technology Stack**
 
 ### **Backend**
+
 - **FastAPI**: Modern Python web framework with async support
 - **PyMuPDF (fitz)**: PDF text extraction with coordinates
 - **Groq API**: Fast LLM inference (llama-3.3-70b-versatile)
@@ -56,228 +70,204 @@ insurance-document-analyzer/
 - **SQLite**: Enhanced database for findings and metadata
 - **Transformers**: Local Jina embeddings for semantic search
 - **Loguru**: Enhanced logging with pretty output
-- **Pydantic**: Data validation and serialization
+
+![galaxy-brain-ai](https://github.com/user-attachments/assets/77d75e93-fca5-42d6-b571-c057ba799572)
 
 ### **Frontend**
-- **React 18**: Modern React with hooks
-- **TypeScript**: Type safety throughout
-- **Vite**: Fast development and building
-- **React Query**: Server state management
-- **React Router**: Client-side routing
-- **Tailwind CSS**: Utility-first styling
-- **Shadcn/ui**: Beautiful component library
-- **Axios**: HTTP client for API calls
 
-## **Quick Start**
+- **React**: Modern UI library with hooks
+- **TypeScript**: Type-safe development
+- **Vite**: Fast build tool and dev server
+- **TailwindCSS**: Utility-first styling
+- **Shadcn/ui**: High-quality component library
+- **Zustand**: Lightweight state management
+- **React Router**: Client-side routing
+- **React PDF**: Native PDF rendering
+
+---
+
+## **Getting Started**
 
 ### **Prerequisites**
+
 - Python 3.8+
 - Node.js 18+
-- Groq API key
+- Groq API key (get from [groq.com](https://groq.com))
 
-### **1. Clone the Repository**
-```bash
-git clone https://github.com/Raykarr/AI-Insurance-Document-Analyzer
-cd insurance-document-analyzer
-```
+### **Installation**
 
-### **2. Backend Setup**
-```bash
-cd backend
+#### **Backend Setup**
 
-# Install dependencies
-pip install -r requirements.txt
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Raykarr/AI-Insurance-Document-Analyzer-Local
+   cd AI-Insurance-Document-Analyzer-Local
+   ```
 
-# Set environment variables
-export GROQ_API_KEY="your_groq_api_key_here"
+2. **Set up Python environment:**
+   ```bash
+   cd backend
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-# Run the server
-python app.py
-# or
-uvicorn app:app --host 0.0.0.0 --port 8000 --reload
-```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### **3. Frontend Setup**
-```bash
-cd frontend
+4. **Set up environment variables:**
+   Create a `.env` file in the backend directory:
+   ```
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
 
-# Install dependencies
-npm install
+#### **Frontend Setup**
 
-# Start development server
-npm run dev
-```
+1. **Navigate to frontend:**
+   ```bash
+   cd ../frontend
+   ```
 
-### **4. Access the Application**
-- **Frontend**: http://localhost:8080
-- **Backend API**: http://localhost:8000
-- **API Documentation**: http://localhost:8000/docs
-- **Health Check**: http://localhost:8000/health
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-## **System Architecture**
+### **Running the Application**
 
-### **Complete Architecture Documentation**
-- **`DIAGRAMS FOLDER`** - Mermaid diagrams for GitHub/Notion compatibility
+1. **Start the backend server:**
+   ```bash
+   cd backend
+   python app.py
+   ```
+   Backend will run on `http://localhost:8000`
 
-### **Data Flow**
-1. **Document Upload** → PDF processing with coordinates
-2. **Text Extraction** → Location-aware text blocks
-3. **Chunking** → Semantic chunks with coordinates
-4. **AI Analysis** → Proactive concern detection
-5. **Storage** → Structured findings in database
-6. **Frontend** → Interactive exploration and chat
+![its-working](https://github.com/user-attachments/assets/df50e66f-abb6-48cb-a193-48a010afd8e3)
 
-### **Key Components**
-- **Enhanced Database**: SQLite with findings and cache
-- **Analysis Engine**: Groq LLM with specialized prompts
-- **Vector Storage**: ChromaDB for semantic search
-- **Interactive UI**: React with real-time progress
+2. **Start the frontend development server:**
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+   Frontend will run on `http://localhost:5173`
 
-## **API Endpoints**
+3. **Access the application:**
+   Open your browser and navigate to `http://localhost:5173`
 
-### **Core Endpoints**
-- `POST /ingest` - Upload and analyze document
-- `GET /analysis/{document_id}` - Get analysis status
-- `GET /findings/{document_id}` - Get all findings (deduplicated)
-- `POST /findings/{finding_id}/chat` - Contextual chat
-- `GET /documents/{document_id}/pdf` - Serve PDF file
-- `GET /progress/{document_id}` - Real-time progress
+---
 
-### **Utility Endpoints**
-- `GET /health` - Health check with system status
-- `GET /docs` - Interactive API documentation
-- `GET /test/chunking` - Test chunking functionality
+## **How It Works**
 
-## **User Experience**
+### **Analysis Pipeline**
 
-### **1. Document Upload & Processing**
-- Select PDF on home page
-- Auto-redirects to analysis page
-- Real-time progress tracking with detailed steps:
-  - File validation
-  - Text extraction with coordinates
-  - Embedding generation
-  - Vector store setup
-  - AI analysis processing
-- Background concern detection
-- Results display with findings
+1. **Document Upload**
+   - User uploads insurance policy PDF
+   - System validates and stores document
+   - Generates unique document ID
 
-### **2. Findings Discovery**
-- Categorized concern display with deduplication
-- Category filters (All, EXCLUSION, LIMITATION, etc.)
-- Pagination (10 items per page)
-- Severity-based color coding
-- Confidence scoring
-- Page-specific navigation
+2. **Text Extraction**
+   - PyMuPDF extracts text with page and coordinate information
+   - Text is stored in SQLite database
+   - Location data preserved for precise tracking
 
-### **3. Interactive Exploration**
-- Click finding to select and view details
-- PDF viewer displays document with native browser rendering
-- Contextual chat panel with finding context
-- Ask specific questions about the finding
-- Get precise, context-aware answers
-- Chat history preserved across finding selections
+3. **Chunking**
+   - Document split into semantic chunks
+   - Chunks stored in ChromaDB with embeddings
+   - Local Jina embeddings used (no external API)
 
-## **Development**
+4. **AI Analysis**
+   - Groq API analyzes chunks for concerns
+   - 10 categories of analysis:
+     * Coverage Limitations
+     * Exclusions
+     * Claim Requirements
+     * Premium & Payment Terms
+     * Cancellation Terms
+     * Coverage Periods
+     * Beneficiary Rules
+     * Liability Limits
+     * Deductibles
+     * Special Conditions
+   - Severity and confidence scores assigned
 
-### **Backend Development**
-```bash
-cd backend
+5. **Findings Storage**
+   - Findings deduplicated and stored
+   - Categories, severity, and metadata preserved
+   - Real-time progress updates sent to frontend
 
-# Install dependencies
-pip install -r requirements.txt
+6. **Interactive Exploration**
+   - Users can filter findings by category
+   - Click findings to view details
+   - Ask questions about specific findings
+   - Chat history preserved per finding
 
-# Run with auto-reload
-uvicorn app:app --reload
+---
 
-# Check code quality
-flake8 app.py
-```
+## **API Documentation**
 
-### **Frontend Development**
-```bash
-cd frontend
+FastAPI provides automatic interactive API documentation:
+- Swagger UI: `http://localhost:8000/docs`
+- ReDoc: `http://localhost:8000/redoc`
 
-# Install dependencies
-npm install
+### **Key Endpoints**
 
-# Run development server
-npm run dev
+- `POST /upload`: Upload insurance document
+- `GET /document/{doc_id}/status`: Get analysis status
+- `GET /document/{doc_id}/findings`: Get all findings
+- `POST /chat`: Chat about specific finding
 
-# Build for production
-npm run build
+---
 
-# Type checking
-npm run type-check
-```
+## **Architecture**
 
-## **Testing**
+Detailed architecture documentation available in:
+- [ARCHITECTURE.md](ARCHITECTURE.md): System architecture and design
+- [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md): Project summary and features
+- [implementation_plan.md](implementation_plan.md): Implementation details
 
-### **Manual Testing**
-1. **Upload a PDF**: Test document upload and processing
-2. **Check Analysis**: Verify background analysis completion
-3. **Browse Findings**: Test filtering and categorization
-4. **Interactive Features**: Test finding selection and chat
-5. **Contextual Chat**: Test finding-specific questions
-
-### **API Testing**
-```bash
-# Upload document
-curl -X POST "http://localhost:8000/ingest" \
-  -H "Content-Type: multipart/form-data" \
-  -F "file=@test_document.pdf"
-
-# Check status
-curl "http://localhost:8000/analysis/{document_id}"
-
-# Get findings
-curl "http://localhost:8000/findings/{document_id}"
-
-# Check progress
-curl "http://localhost:8000/progress/{document_id}"
-```
+---
 
 ## **Troubleshooting**
 
 ### **Common Issues**
 
-1. **"GROQ_API_KEY not set"**
-   ```bash
-   # Check environment variable
-   echo $GROQ_API_KEY  # Mac/Linux
-   echo %GROQ_API_KEY% # Windows
-   ```
+#### **Backend Won't Start**
+   - Check Python version (3.8+ required)
+   - Verify all dependencies installed
+   - Ensure GROQ_API_KEY is set
+   - Check port 8000 is available
 
-2. **Import errors**
-   ```bash
-   # Backend
-   pip install -r requirements.txt
-   
-   # Frontend
-   npm install
-   ```
+#### **Frontend Won't Start**
+   - Check Node.js version (18+ required)
+   - Run `npm install` again
+   - Clear `node_modules` and reinstall
+   - Check port 5173 is available
 
-3. **Port conflicts**
-   ```bash
-   # Use different ports
-   uvicorn app:app --port 8001  # Backend
-   npm run dev -- -p 8081       # Frontend
-   ```
+#### **Analysis Fails**
+   - Verify GROQ_API_KEY is valid
+   - Check PDF is not corrupted
+   - Ensure sufficient disk space
+   - Check backend logs for errors
 
-4. **Database errors**
+#### **Database Issues**
    - System auto-creates databases
    - Check file permissions
    - Ensure sufficient disk space
 
 ### **Performance Issues**
+
 - Large PDFs may require more RAM
 - Consider chunking very large documents
 - Monitor ChromaDB performance
 - Use SSD storage for better I/O
 
+---
+
 ## **Performance Metrics**
 
 ### **Target Performance**
+
 - Document analysis time < 30 seconds
 - Finding accuracy > 95%
 - API response time < 200ms
@@ -285,15 +275,19 @@ curl "http://localhost:8000/progress/{document_id}"
 - Real-time progress updates every 2 seconds
 
 ### **Optimization Features**
+
 - Background processing for analysis
 - Database caching for text and chunks
 - Deduplication of findings
 - Memory-efficient chunking
 - 120-second upload timeout
 
+---
+
 ## **Security**
 
 ### Implemented Security Features 
+
 - File validation (PDF type checking)
 - Input sanitization
 - CORS configuration
@@ -301,15 +295,19 @@ curl "http://localhost:8000/progress/{document_id}"
 - Error handling and recovery
 - 
 ### Production Considerations 
+
 - Use production ASGI server (Gunicorn + Uvicorn)
 - Set up reverse proxy (Nginx)
 - Configure SSL/TLS
 - Set up monitoring and logging
 - Database backups
 
+---
+
 ## **Key Features Status**
 
 ### **Fully Implemented & Working**
+
 - **Document Upload**: Drag & drop with auto-upload
 - **Text Extraction**: Location-aware with coordinates
 - **AI Analysis**: Proactive concern detection
@@ -324,6 +322,7 @@ curl "http://localhost:8000/progress/{document_id}"
 - **Architecture Documentation**: PlantUML and Mermaid diagrams
 
 ### **Performance Optimizations**
+
 - **Background Processing**: Async analysis tasks
 - **Caching Strategy**: Database caching for text and chunks
 - **Deduplication**: Prevents duplicate findings
